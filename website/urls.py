@@ -19,6 +19,7 @@ from signup.views import signaction
 from login.views import loginaction
 from website.views import request
 from website.views import home
+from website.views import about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,5 @@ urlpatterns = [
     path('',loginaction),
     path('request/',request),
     path('home/',home),
+    path('about/',about),
 ]

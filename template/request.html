@@ -24,7 +24,7 @@
                 <li><a href="/home">Home</a></li>
                 <li><a href="/request">Loundry Request</a></li>
                 <li><a href="#Laptop">Loundry Status</a></li>
-                <li><a href="#products">About</a></li>
+                <li><a href="/about">About</a></li>
                 </ul>
             </div>
             <div class="rightlink"><a href="#">Logout</a></div>
@@ -34,7 +34,9 @@
         <div class="container">
             <header>Loundry Requests</header>
 
-            <form action="#">
+            <form action="/" method="post">
+                {% csrf_token %}
+                {% load static %}
                 <div class="form first">
                     <div class="details personal">
                         <span class="title">Personal Details</span>
@@ -42,37 +44,38 @@
                         <div class="fields">
                             <div class="input-field">
                                 <label>Full Name</label>
-                                <input type="text" placeholder="Enter your name" required>
+                                <input type="text" placeholder="Enter your name" name='FullName'required>
                             </div>
 
                             <div class="input-field">
                                 <label>Age</label>
-                                <input type="number" placeholder="Enter your age" required>
+                                <input type="number" placeholder="Enter your age" name='Age' required>
                             </div>
 
                             <div class="input-field">
                                 <label>Email</label>
-                                <input type="text" placeholder="Enter your email" required>
+                                <input type="text" placeholder="Enter your email" name='Email' required>
                             </div>
 
                             <div class="input-field">
                                 <label>Mobile Number</label>
-                                <input type="tel" placeholder="Enter mobile number" required>
+                                <input type="tel" placeholder="Enter mobile number" name='Mobile' required>
                             </div>
 
                             <div class="input-field">
                                 <label>Gender</label>
-                                <select required>
+                                <input type="text" placeholder="Gender" name='Gender'required>
+                                <!-- <select required>
                                     <option disabled selected>Select gender</option>
                                     <option>Male</option>
                                     <option>Female</option>
                                     <option>Others</option>
-                                </select>
+                                </select> -->
                             </div>
 
                             <div class="input-field">
                                 <label>Others</label>
-                                <input type="text" placeholder="Others Details!!" required>
+                                <input type="text" placeholder="Others Details!!" name='Others' required>
                             </div>
                         </div>
                     </div>
@@ -85,32 +88,32 @@
                             <div class="fields">
                                 <div class="input-field">
                                     <label>Address Type</label>
-                                    <input type="text" placeholder="Permanent or Temporary" required>
+                                    <input type="text" placeholder="Permanent or Temporary" name='Address' required>
                                 </div>
         
                                 <div class="input-field">
                                     <label>Nationality</label>
-                                    <input type="text" placeholder="Enter nationality" required>
+                                    <input type="text" placeholder="Enter nationality" name='Nationality' required>
                                 </div>
         
                                 <div class="input-field">
                                     <label>State</label>
-                                    <input type="text" placeholder="Enter your state" required>
+                                    <input type="text" placeholder="Enter your state" name='State' required>
                                 </div>
         
                                 <div class="input-field">
                                     <label>District</label>
-                                    <input type="text" placeholder="Enter your district" required>
+                                    <input type="text" placeholder="Enter your district" name='District' required>
                                 </div>
         
                                 <div class="input-field">
                                     <label>Block Number</label>
-                                    <input type="number" placeholder="Enter block number" required>
+                                    <input type="number" placeholder="Enter block number" name='Block' required>
                                 </div>
         
                                 <div class="input-field">
                                     <label>Ward Number</label>
-                                    <input type="number" placeholder="Enter ward number" required>
+                                    <input type="number" placeholder="Enter ward number" name='Ward' required>
                                 </div>
                             </div>
 
@@ -132,71 +135,35 @@
                         <div class="fields">
                             <div class="input-field">
                                 <label>Loundry Type</label>
-                                <input type="text" placeholder="Enter Loundry type" required>
+                                <input type="text" placeholder="Enter Loundry type" name='laundry' required>
                             </div>
 
                             <div class="input-field">
                                 <label>Number Of Cloths</label>
-                                <input type="number" placeholder="Enter number of cloths" required>
+                                <input type="number" placeholder="Enter number of cloths" name='Cloths' required>
                             </div>
 
                             <div class="input-field">
                                 <label>Number of KG Cloths</label>
-                                <input type="number" placeholder="Enter number of KG cloths" required>
+                                <input type="number" placeholder="Enter number of KG cloths" name='Weight' required>
                             </div>
 
                             <div class="input-field">
                                 <label>Descriptions</label>
-                                <input type="text" placeholder="Descriptions" required>
+                                <input type="text" placeholder="Descriptions" name='Descriptions'required>
                             </div>
 
                             <div class="input-field">
                                 <label>Issued Date</label>
-                                <input type="date" placeholder="Enter your issued date" required>
+                                <input type="date" placeholder="Enter your issued date" name='Issued' required>
                             </div>
 
                             <div class="input-field">
                                 <label>Delievry Date</label>
-                                <input type="date" placeholder="Enter delievry date" required>
+                                <input type="date" placeholder="Enter delievry date" name='Delievry' required>
                             </div>
                         </div>
                     </div>
-
-    <!--                 
-                    <div class="details family">
-                        <span class="title">Family Details</span>
-
-                        <div class="fields">
-                            <div class="input-field">
-                                <label>Father Name</label>
-                                <input type="text" placeholder="Enter father name" required>
-                            </div>
-
-                            <div class="input-field">
-                                <label>Mother Name</label>
-                                <input type="text" placeholder="Enter mother name" required>
-                            </div>
-
-                            <div class="input-field">
-                                <label>Grandfather</label>
-                                <input type="text" placeholder="Enter grandfther name" required>
-                            </div>
-
-                            <div class="input-field">
-                                <label>Spouse Name</label>
-                                <input type="text" placeholder="Enter spouse name" required>
-                            </div>
-
-                            <div class="input-field">
-                                <label>Father in Law</label>
-                                <input type="text" placeholder="Father in law name" required>
-                            </div>
-
-                            <div class="input-field">
-                                <label>Mother in Law</label>
-                                <input type="text" placeholder="Mother in law name" required>
-                            </div>
-                        </div> -->
 
                         <div class="buttons">
                             <div class="backBtn">
