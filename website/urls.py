@@ -20,6 +20,9 @@ from login.views import loginaction
 from website.views import request
 from website.views import home
 from website.views import about
+from website.views import submitted
+# from website
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +31,7 @@ urlpatterns = [
     path('request/',request),
     path('home/',home),
     path('about/',about),
+    path('request/submitted',submitted),
+    path('track/',views.track),
+    path('track/trackingdetails',views.trackingdetails)
 ]

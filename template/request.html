@@ -23,18 +23,18 @@
                 <ul class="links">
                 <li><a href="/home">Home</a></li>
                 <li><a href="/request">Loundry Request</a></li>
-                <li><a href="#Laptop">Loundry Status</a></li>
+                <li><a href="#">Loundry Status</a></li>
                 <li><a href="/about">About</a></li>
                 </ul>
             </div>
-            <div class="rightlink"><a href="#">Logout</a></div>
+            <div class="rightlink"><a href="http://localhost:8000">Logout</a></div>
             </nav>
         </div>
 
         <div class="container">
             <header>Loundry Requests</header>
 
-            <form action="/" method="post">
+            <form action="submitted" method="post">
                 {% csrf_token %}
                 {% load static %}
                 <div class="form first">
@@ -48,23 +48,23 @@
                             </div>
 
                             <div class="input-field">
-                                <label>Age</label>
-                                <input type="number" placeholder="Enter your age" name='Age' required>
-                            </div>
-
-                            <div class="input-field">
-                                <label>Email</label>
-                                <input type="text" placeholder="Enter your email" name='Email' required>
-                            </div>
-
-                            <div class="input-field">
                                 <label>Mobile Number</label>
-                                <input type="tel" placeholder="Enter mobile number" name='Mobile' required>
+                                <input type="tel" maxlength="10" placeholder="Enter Mobile Number" name='Mobile' required>
                             </div>
 
                             <div class="input-field">
-                                <label>Gender</label>
-                                <input type="text" placeholder="Gender" name='Gender'required>
+                                <label>State</label>
+                                <input type="text" placeholder="Enter State" name='State' required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>City</label>
+                                <input type="text" placeholder="Enter City" name='City' required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Pin Code</label>
+                                <input type="text" maxlength="6" placeholder="Enter Pin Code" name='PinCode'required>
                                 <!-- <select required>
                                     <option disabled selected>Select gender</option>
                                     <option>Male</option>
@@ -74,61 +74,59 @@
                             </div>
 
                             <div class="input-field">
-                                <label>Others</label>
-                                <input type="text" placeholder="Others Details!!" name='Others' required>
+                                <label>Address</label>
+                                <input type="text" placeholder="Full Address" name='Address' required>
                             </div>
                         </div>
                     </div>
 
                     <!-- <div class="details ID"> -->
                         
-                        <div class="details address">
-                            <span class="title">Address Details</span>
-        
+                        <div class="details ID">
+                            <span class="title">Loundry Details</span>
+    
                             <div class="fields">
                                 <div class="input-field">
-                                    <label>Address Type</label>
-                                    <input type="text" placeholder="Permanent or Temporary" name='Address' required>
+                                    <label>Loundry Type</label>
+                                    <input type="text" placeholder="Enter Loundry type" name='Laundry' required>
                                 </div>
-        
+    
                                 <div class="input-field">
-                                    <label>Nationality</label>
-                                    <input type="text" placeholder="Enter nationality" name='Nationality' required>
+                                    <label>Number Of Cloths</label>
+                                    <input type="number" placeholder="Enter number of cloths" name='Cloths' required>
                                 </div>
-        
+    
                                 <div class="input-field">
-                                    <label>State</label>
-                                    <input type="text" placeholder="Enter your state" name='State' required>
+                                    <label>Weight of Cloths</label>
+                                    <input type="number" placeholder="Weight of Cloths in KG" name='Weight' required>
                                 </div>
-        
+    
                                 <div class="input-field">
-                                    <label>District</label>
-                                    <input type="text" placeholder="Enter your district" name='District' required>
+                                    <label>Descriptions</label>
+                                    <input type="text" placeholder="Descriptions" name='Descriptions'required>
                                 </div>
-        
+    
                                 <div class="input-field">
-                                    <label>Block Number</label>
-                                    <input type="number" placeholder="Enter block number" name='Block' required>
+                                    <label>Expected Issued Date</label>
+                                    <input type="date" placeholder="Expected issued date" name='Issued' required>
                                 </div>
-        
+    
                                 <div class="input-field">
-                                    <label>Ward Number</label>
-                                    <input type="number" placeholder="Enter ward number" name='Ward' required>
+                                    <label>Expected Delivery Date</label>
+                                    <input type="date" placeholder="Expected delivery date" name='Delivery' required>
                                 </div>
                             </div>
+                        </div>
 
-                        <button class="nextBtn">
-                            <span class="btnText">Next</span>
+                        <button class="submit">
+                            <span class="btnText">Submit</span>
                             <i class="uil uil-navigator"></i>
                         </button>
                     </div> 
                 </div>
 
-
-
     <!-- // 2nd Form -->
-
-                <div class="form second">
+                <!-- <div class="form second">
                     <div class="details ID">
                         <span class="title">Loundry Details</span>
 
@@ -176,7 +174,7 @@
                                 <i class="uil uil-navigator"></i>
                             </button>
                         </div>
-                    </div> 
+                    </div>  -->
                 </div>
             </form>
         </div>

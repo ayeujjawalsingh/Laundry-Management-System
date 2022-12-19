@@ -23,7 +23,7 @@
   color: #202020;
 }
 footer{
-  position: fixed;
+  position: absolute;
   bottom: 0px;
   width: 100%;
   background: #111;
