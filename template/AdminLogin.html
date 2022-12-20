@@ -8,9 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#92c8d0">
 
-  <title>Client SignIn Page</title>
+  <title>Admin SignIn Page</title>
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1053/1053364.png"type="image/x-icon">
-  <link href="{% static 'css/style.css'%}" rel="stylesheet">
+  <link href="{% static 'css/AdminStyle.css'%}" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
@@ -18,10 +18,10 @@
 
 <body>
   <div class="signin-signup">
-    <form action="#" method="post" class="sign-in-form">
+    <form action="Login" method="post" class="sign-in-form">
       {% csrf_token %}
       {% load static %}
-      <h2 class="title">Sign in</h2>
+      <h2 class="title">Admin Sign in</h2>
       <div class="input-field">
         <i class="fas fa-user"></i>
         <input type="text" placeholder="Email" name ="email"  required/>
@@ -46,12 +46,10 @@
           <i class="fab fa-linkedin-in"></i>
         </a>
       </div>
-      <p class="social-text">New here? <a href="http://localhost:8000/signup/" style="color: red;">Sign Up </a></p>
-      <p class="social-text">Admin Section here? <a href="http://localhost:8000/adminlogin/" style="color: red;">Admin Sign In </a></p>
+      <!-- <p class="social-text">New here? <a href="http://localhost:8000/adminsignup/" style="color: red;">Sign Up </a></p> -->
+      <p class="social-text">Client Section? <a href="http://localhost:8000" style="color: red;">Client Sign In </a></p>
     </form>
   </div>
-
-  <!-- <script src="app.js"></script> -->
 </body>
 
 </html>

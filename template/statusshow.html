@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LMS | Loundry Request Done</title>
+    
+    <title>LMS | Status Show</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
         *{
@@ -26,9 +27,9 @@
             height: 100vh;
         }
         .input{
+            height: 40px;
             width: 100%;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             border: 2px inset white;
             border-radius: 10px;
@@ -37,7 +38,10 @@
         }
         .status{
             display: flex;
-            flex-direction: column;
+            height: 100%;
+            width: 30%;
+            /* background: blue; */
+            /* align-content: center; */
             align-items: center;
             justify-content: space-around;
             
@@ -52,20 +56,19 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            margin-top: 5px;
+            /* text-decoration: none; */
         }
         .submit a{
             color: black;
         }
+
+
     </style>
 </head>
 <body>
     <div class="status">
         <div class="input">
-            <h1>Thank You "{{Name}}"</h1>
-            <h1>Your Request have been done</h1>
-            <h3>Your Tracking Id is {{TrackingId}}</h3>
-            <h3>And it will be deliver at your address : "{{Address}}"</h3>
+            <h3>Your Request is : "{{Status}}"</h3>
         </div>
         <div class="submit">
             <a href="../home">Go Home</a>

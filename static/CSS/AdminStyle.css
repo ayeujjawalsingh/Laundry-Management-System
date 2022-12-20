@@ -29,7 +29,7 @@
 
 /* supported in all browser */
 html {
-  background: url(../images/first.jpg) no-repeat center center fixed;
+  background: url(../images/second.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   opacity: 0.89;
@@ -219,9 +219,6 @@ form {
     max-width: 80vw
   }
 }
-
-
-
 
 
 .input-field {

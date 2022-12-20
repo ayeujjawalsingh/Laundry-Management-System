@@ -33,5 +33,11 @@ urlpatterns = [
     path('about/',about),
     path('request/submitted',submitted),
     path('track/',views.track),
-    path('track/trackingdetails',views.trackingdetails)
+    path('track/trackingdetails',views.trackingdetails),
+    path('adminlogin/',views.AdminSignin),
+    # path('adminsignup/',views.AdminSignup),
+    # path('adminsignup/Signup',views.Signup),
+    path('adminlogin/Login',views.Login),
+    # path('adminsignup/Login',views.Login)
+    
 ]

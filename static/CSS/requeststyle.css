@@ -54,7 +54,7 @@ body{
     display: flex;
     max-width: calc(100% - 200px);
     margin: 0 auto;
-    height: 70px;
+    height: 60px;
     width: 100%;
     align-items: center;
     justify-content: space-between;
