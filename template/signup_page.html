@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#92c8d0">
+  <title>Client SignUp Page</title>
+  <link rel="icon" href="https://www.freeiconspng.com/thumbs/sign-up-icon/sign-up-button-icon-26.png" type="image/x-icon">
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="signin-signup">
+    <form action="#" method="post" class="sign-up-form">
+      {% csrf_token %}
+      {% load static %}
+      <h2 class="title">Sign up</h2>
+      <div class="input-field">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="First Name" name='first_name' required/>
+      </div>
+      <div class="input-field">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Last Name" name='last_name' required/>
+      </div>
+
+
+      <div class="input-field">
+        <i class="fas fa-male"></i>
+        <label class="gender">
+
+          <label for="male">Male
+            <input type="radio" name="sex" value="male" required id="male">
+          </label>
+          <label for="female"><i class="fas fa-female"></i>Female
+            <input type="radio" name="sex" value="female" required id="female">
+          </label> <br>
+
+        </label>
+
+
+      </div>
+
+      <div class="input-field">
+        <i class="fas fa-envelope"></i>
+        <input type="email" placeholder="Email" name="email"  required/>
+      </div>
+      <!-- <div class="input-field">
+        <i class="fas fa-phone"></i>
+        <input type="tel" placeholder="Phone" />
+      </div> -->
+      <div class="input-field">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" name="password" required/>
+      </div>
+
+
+      <input type="submit" class="btn" value="Sign up" />
+      <!-- <p class="social-text">Or Sign up with social platforms</p>
+      <div class="social-media">
+        <a href="#" onclick="window.open('https://instagram.com/HeyRajSingh','name','width=600,height=400')"
+          class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" onclick="window.open('https://github.com/AyeRaj','name','width=600,height=400')"
+          class="social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#" onclick="new_popup()" class="social-icon">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="#" onclick="window.open('https://www.linkedin.com/in/ayerajkumar/','name','width=600,height=400')"
+          class="social-icon">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div> -->
+      <p class="social-text">Already Registered? <a href="http://localhost:8000" style="color: red;">Sign In </a></p>
+    </form>
+
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

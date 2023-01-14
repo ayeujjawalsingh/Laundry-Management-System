@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!----======== CSS ======== -->
+    <link href="{% static 'css/trackstatus.css'%}" rel="stylesheet">
+    <title>LMS | Track Status</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+        <div class="content">
+            <div class="logo"><a href="#">LMS</a></div>
+            <ul class="links">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/request">Loundry Request</a></li>
+            <li><a href="/track">Track Status</a></li>
+            <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+        <div class="rightlink"><a href="http://localhost:8000">Logout</a></div>
+        </nav>
+    </div>
+
+    <form action="trackingdetails" method="post">
+        {% csrf_token %}
+        {% load static %}
+        <div class="status">
+            <div class="input">
+                <input type="text" placeholder="Enter Tracking Id" name='TrackingId'>
+            </div>
+            <div class="submit">
+                <button>submit</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

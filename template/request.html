@@ -1,0 +1,216 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link href="{% static 'css/requeststyle.css'%}" rel="stylesheet">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>LMS | Loundry Request</title> 
+</head>
+<body>
+    <!-- <div class="main"> -->
+        <div class="wrapper">
+            <nav>
+            <div class="content">
+                <div class="logo"><a href="#">LMS</a></div>
+                <ul class="links">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/request">Loundry Request</a></li>
+                <li><a href="/track">Track Status</a></li>
+                <li><a href="/about">About</a></li>
+                </ul>
+            </div>
+            <div class="rightlink"><a href="http://localhost:8000">Logout</a></div>
+            </nav>
+        </div>
+
+        <div class="container">
+            <header>Loundry Requests</header>
+
+            <form action="submitted" method="post">
+                {% csrf_token %}
+                {% load static %}
+                <div class="form first">
+                    <div class="details personal">
+                        <span class="title">Personal Details</span>
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Enter your name" name='FullName'required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Mobile Number</label>
+                                <input type="tel" maxlength="10" placeholder="Enter Mobile Number" name='Mobile' required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>State</label>
+                                <!-- <input type="text" placeholder="Enter State" name='State' required> -->
+                                <select value="State" name="State" required>
+                                    <option option disabled selected>Choose State:</option>
+                                    <option >Andhra Pradesh</option>
+                                    <option >Arunachal Pradesh</option>
+                                    <option >Assam</option>
+                                    <option >Bihar</option>
+                                    <option >Chhattisgarh</option>
+                                    <option >Goa</option>
+                                    <option >Gujarat</option>
+                                    <option >Haryana</option>
+                                    <option >Himachal Pradesh</option>
+                                    <option >Jharkhand</option>
+                                    <option >Karnataka</option>
+                                    <option >Kerala</option>
+                                    <option >Madhya Pradesh</option>
+                                    <option >Maharashtra</option>
+                                    <option >Manipur</option>
+                                    <option >Meghalaya</option>
+                                    <option >Mizoram</option>
+                                    <option >Nagaland</option>
+                                    <option >Odisha</option>
+                                    <option >Punjab</option>
+                                    <option >Rajasthan</option>
+                                    <option >Sikkim</option>
+                                    <option >Tamil Nadu</option>
+                                    <option >Telangana</option>
+                                    <option >Tripura</option>
+                                    <option >Uttar Pradesh</option>
+                                    <option >Uttarakhand</option>
+                                    <option >West Bengal</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>City</label>
+                                <input type="text" placeholder="Enter City" name='City' required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Pin Code</label>
+                                <input type="text" maxlength="6" placeholder="Enter Pin Code" name='PinCode'required>
+                                <!-- <select required>
+                                    <option disabled selected>Select gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Others</option>
+                                </select> -->
+                            </div>
+
+                            <div class="input-field">
+                                <label>Address</label>
+                                <input type="text" placeholder="Full Address" name='Address' required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="details ID"> -->
+                        
+                        <div class="details ID">
+                            <span class="title">Loundry Details</span>
+    
+                            <div class="fields">
+                                <div class="input-field">
+                                    <label>Loundry Type</label>
+                                    <select value="Laundry" name="Laundry" id="slct1">
+                                        <option disabled selected>Choose a option</option>
+                                    </select>
+                                </div>
+                                <div class="input-field" >
+                                    <label>Choose from these:</label>
+                                    <select value="Cloths" name="Cloths" id="slct2"></select>
+                                </div>
+                                <div class="input-field">
+                                    <label>Weight of Cloths</label>
+                                    <input type="number" maxlength="1" placeholder="Weight of Cloths <10 KG" name='Weight' required>
+                                </div>
+    
+                                <div class="input-field">
+                                    <label>Descriptions</label>
+                                    <input type="text" placeholder="Descriptions" name='Descriptions'required>
+                                </div>
+    
+                                <div class="input-field">
+                                    <label>Expected Issued Date</label>
+                                    <input type="date" placeholder="Expected issued date" name='Issued' required>
+                                </div>
+    
+                                <!-- <div class="input-field">
+                                    <label>Expected Delivery Date</label>
+                                    <input type="date" placeholder="Expected delivery date" name='Delivery' required>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <button class="submit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div> 
+                </div>
+
+    <!-- // 2nd Form -->
+                <!-- <div class="form second">
+                    <div class="details ID">
+                        <span class="title">Loundry Details</span>
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Loundry Type</label>
+                                <input type="text" placeholder="Enter Loundry type" name='laundry' required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Number Of Cloths</label>
+                                <input type="number" placeholder="Enter number of cloths" name='Cloths' required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Number of KG Cloths</label>
+                                <input type="number" placeholder="Enter number of KG cloths" name='Weight' required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Descriptions</label>
+                                <input type="text" placeholder="Descriptions" name='Descriptions'required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Issued Date</label>
+                                <input type="date" placeholder="Enter your issued date" name='Issued' required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Delievry Date</label>
+                                <input type="date" placeholder="Enter delievry date" name='Delievry' required>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="buttons">
+                            <div class="backBtn">
+                                <i class="uil uil-navigator"></i>
+                                <span class="btnText">Back</span>
+                            </div>
+                            
+                            <button class="sumbit">
+                                <span class="btnText">Submit</span>
+                                <i class="uil uil-navigator"></i>
+                            </button>
+                        </div>
+                    </div>  -->
+                </div>
+            </form>
+        </div>
+
+        <script src="../static/Javascript/script.js"></script>
+    <!-- </div> -->
+</body>
+</html>

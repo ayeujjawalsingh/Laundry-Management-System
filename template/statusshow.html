@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>LMS | Status Show</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            /* background-color: #d9d9d9; */
+            background-image: url(../static/images/third.jpg);
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .input{
+            height: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px inset white;
+            border-radius: 10px;
+            padding-left: 7px;
+            background: rgb(228, 225, 225);
+        }
+        .status{
+            display: flex;
+            height: 100%;
+            width: 30%;
+            /* background: blue; */
+            /* align-content: center; */
+            align-items: center;
+            justify-content: space-around;
+            
+        }
+        .submit {
+            height: 40px;
+            width: 130px;
+            border: 2px inset white;
+            border-radius: 10px;
+            background: #4070f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            /* text-decoration: none; */
+        }
+        .submit a{
+            color: rgb(255, 255, 255);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="status">
+        <div class="input">
+            <h3>Your Request is : "{{Status}}"</h3>
+        </div>
+        <div class="submit">
+            <a href="../home">Go Home</a>
+        </div>
+    </div>
+</body>
+</html>

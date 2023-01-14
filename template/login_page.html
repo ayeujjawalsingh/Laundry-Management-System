@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#92c8d0">
+
+  <title>Client SignIn Page</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1053/1053364.png"type="image/x-icon">
+  <link href="{% static 'css/style.css'%}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="signin-signup">
+    <form action="#" method="post" class="sign-in-form">
+      {% csrf_token %}
+      {% load static %}
+      <h2 class="title">Sign in</h2>
+      <div class="input-field">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Email" name ="email"  required/>
+      </div>
+      <div class="input-field">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" name="password"  required/>
+      </div>
+      <input type="submit" value="Login" class="btn solid" />
+      <p class="social-text">Or Sign in with social platforms</p>
+      <div class="social-media">
+        <a href="#" onclick="window.open('https://instagram.com/ayeujjawalsingh','name','width=600,height=400')" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" onclick="window.open('https://github.com/ayeujjawalsingh','name','width=600,height=400')" class="social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#" onclick="new_popup()" class="social-icon">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="#" onclick="window.open('https://www.linkedin.com/in/ayeujjawalsingh/','name','width=600,height=400')" class="social-icon">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+      <p class="social-text">New here? <a href="http://localhost:8000/signup/" style="color: red;">Sign Up </a></p>
+      <p class="social-text">Admin Section here? <a href="http://localhost:8000/adminlogin/" style="color: red;">Admin Sign In </a></p>
+    </form>
+  </div>
+
+  <!-- <script src="app.js"></script> -->
+</body>
+
+</html>

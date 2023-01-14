@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LMS | Admin Home</title>
+    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css">
+</head>
+
+<body>
+    <style>
+        #data-table {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+
+    <h1>Details Of All the Washing Orders</h1>
+
+    <div id="data-table" class="ag-theme-balham">
+    </div>
+
+    <script type="text/javascript" charset="utf-8">
+
+        const columnDefs = [
+            { field: 'Trackingid' },
+            { field: 'FullName' },
+            { field: 'Mobile' },
+            { field: 'State' },
+            { field: 'City' },
+            { field: 'PinCode' },
+            { field: 'Address' },
+            { field: 'Laundry' },
+            { field: 'Cloths' },
+            { field: 'Weight' },
+            { field: 'Descriptions' },
+            { field: 'Issued' },
+            { field: 'Delivery' },
+        ];
+
+        const gridOptions = {
+
+            defaultColDef: {
+                sortable: true,
+                filter: 'agTextColumnFilter',
+                resizable: true
+            },
+
+            pagination: true,
+            
+            columnDefs: columnDefs,
+            onGridReady: (event) =>{renderDataInTheTable(event.api)}
+        };
+
+        const eGridDiv = document.getElementById('data-table');
+
+        new agGrid.Grid(eGridDiv, gridOptions);
+
+        function renderDataInTheTable(api) { // This function convert data into the table
+            fetch('../static/Json/Track.json')
+                .then(function (response) {     // This will convert the response to javascript object
+                    return response.json();
+                }).then(function (data) {   //then write the javascript object to the console
+                    api.setRowData(data);
+                    api.sizeColumnsToFit();
+                })
+        }
+    </script>
+</body>
+</html>

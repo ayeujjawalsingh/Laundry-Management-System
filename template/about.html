@@ -1,0 +1,63 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <!-- <link href="{% static 'css/requeststyle.css'%}" rel="stylesheet"> -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/aboutstyle.css'%}">
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>LMS | About</title> 
+</head>
+<body>
+    <!-- <div class="main"> -->
+        <div class="wrapper">
+            <nav>
+            <div class="content">
+                <div class="logo"><a href="#">LMS</a></div>
+                <ul class="links">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/request">Loundry Request</a></li>
+                <li><a href="/track">Loundry Status</a></li>
+                <li><a href="/about">About</a></li>
+                </ul>
+            </div>
+            <div class="rightlink"><a href="http://localhost:8000">Logout</a></div>
+            </nav>
+        </div>
+	<div class="section">
+		<div class="container">
+			<div class="contents-section">
+				<div class="title">
+					<h1>About Us</h1>
+				</div>
+				<div class="contents">
+					<h3>Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+					<div class="button">
+						<a href="">Read More</a>
+					</div>
+				</div>
+				<!-- <div class="social">
+					<a href=""><i class="fab fa-facebook-f"></i></a>
+					<a href=""><i class="fab fa-twitter"></i></a>
+					<a href=""><i class="fab fa-instagram"></i></a>
+				</div> -->
+			</div>
+			<div class="image-section">
+				<!-- <img src="{% static 'person.jpg' %}"> -->
+				<img src="../static/images/person.jpg">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

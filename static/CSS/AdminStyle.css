@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://cdn-icons-png.flaticon.com/512/1053/1053364.png');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* body::before {
+  content: "";
+  position: fixed;
+  background: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000') no-repeat center center/cover;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  opacity: 0.89;
+} */
+
+/* not supported in old browser */
+/* html{
+  background: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.89;
+} */
+
+/* supported in all browser */
+html {
+  background: url(../images/second.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  opacity: 0.89;
+  z-index: -1;
+}
+
+body, input{
+  font-family: "Poppins", sans-serif;
+  filter: brightness(95%);
+}
+
+
+
+.signin-signup {
+  position: absolute;
+  height: 95vh;
+  width: 100vw;
+  /* transition: 1s 0.4s ease-in-out; */
+  display: grid;
+}
+
+form {
+  /* background-color: aquamarine; */
+  background-color: rgb(62 62 62 / 5%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  width: 380px;
+  height: 640px;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px -10px rgb(94, 94, 94);
+  border: 3.5px outset rgb(255, 253, 253);
+  /* padding: 90px 0px; */
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  max-width: 330px;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+  box-shadow: 5px 5px 30px -25px;
+}
+
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  /* font-weight: 500; */
+}
+
+
+
+.input-field .gender {
+  color: #aaa;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+}
+
+.gender label{
+  /* color: black; */
+  font-weight: 600;
+}
+
+.gender input {
+  appearance: none;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #999;
+  transition: 0.1s all linear;
+  margin-left: 10px;
+}
+/* .gender label{
+ padding-right: 15px; 
+} */
+.gender input:checked {
+  border: 6px solid rgb(0, 231, 15);
+}
+
+.gender i{
+  padding-right: 18px;
+}
+
+.social-text {
+  padding: 0.7rem 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.45rem;
+  color: #333;
+  border-radius: 50%;
+  border: 1px solid #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s; 
+}
+
+.social-icon:hover {
+  color: #4481eb;
+  border-color: #4481eb;
+}
+
+.btn {
+  width: 150px;
+  background-color: #3aa6b6;
+  border: none;
+  outline: none;
+  /* height: 49px; */
+  padding: 15px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #3dbcd0;
+}
+
+@media (max-width:450px){
+  form{
+    width: 85vw;
+  }
+  .input-field {
+    max-width: 75vw
+  }
+}
+@media (max-width:400px){
+  form{
+    width: 95vw;
+    border-radius: 0px;
+    box-shadow: none;
+    border: none;
+    background-color: rgb(62 62 62 / 0%);
+  }
+  .input-field {
+    max-width: 80vw
+  }
+}
+
+
+.input-field {
+  display: grid;
+  grid-template-columns: 15% 85%;
+
+}
