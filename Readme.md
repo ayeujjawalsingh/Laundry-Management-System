@@ -255,5 +255,9 @@ def home(request):
 ![Laundry Management System](./Image/Admin_Home_Page.png)
 
 ---
+## Video 
 
-[![Everything Is AWESOME](http://i.imgur.com/Ot5DWAW.png)](https://youtu.be/NODqvMdMaFk "Video Link")
+
+
+https://user-images.githubusercontent.com/86152228/212467229-277be5ab-031c-4301-9cd8-935bd889a6af.mp4
+
