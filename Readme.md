@@ -11,7 +11,7 @@
 <a href="https://leetcode.com/ayeujjawalsingh/" target="_blank"><img alt="" src="https://img.shields.io/badge/Leetcode-000?logo=leetcode&logoColor=FFF926&style=for-the-badge" style="vertical-align:center" /></a></p>
 
 # <p align="center" >`Project Installations in Local System`</p>
-## Tools & Technology Required
+## `Tools & Technology Required`
 
 - Python
 - Django
@@ -19,7 +19,7 @@
 - CSS
 - Javascript
 
-## Run Locally
+## `Run Locally`
 
 - Download the Project and Unzip it
 - Open Commant Prompt
@@ -65,7 +65,7 @@ Start the Server
 
 **Install Django in Virtual Envoirnment**
 
-## Installation
+## `Installation`
 Run this command to install `virtual wrapper` which will allows you to make virtual envoirnment
 ```
 pip install virtualenvwrapper-win
@@ -103,7 +103,7 @@ django-admin startproject project
 Then Change you directory inside the folder name `project`
 <hr>
 
-## Setup files and folders
+## `Setup files and folders`
 Now, create django app as `python manage.py startapp` (appName)
 ```
 python manage.py startapp backend
