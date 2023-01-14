@@ -256,4 +256,3 @@ def home(request):
 
 ---
 
-[![Everything Is AWESOME](http://i.imgur.com/Ot5DWAW.png)](https://youtu.be/NODqvMdMaFk "Video Link")
