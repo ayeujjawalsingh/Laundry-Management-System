@@ -1,6 +1,3 @@
-<img src="https://komarev.com/ghpvc/?username=ayeujjawalsingh&label=Profile%20Visiters&color=0e75b6&style=flat" alt="ayeujjawalsingh" />
-
-
 <h1 align="center" > Hi 👋🏻, I'm Ujjawal Singh </br> 
 </h1>
 
