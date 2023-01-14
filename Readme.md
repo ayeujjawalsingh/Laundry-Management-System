@@ -76,7 +76,6 @@ Start the Server
 >   Development Server started at `localhost:8000`
 
 <hr>
-<hr>
 
 # <p align="center"> `Development Documentations`</p>
 
