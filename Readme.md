@@ -235,7 +235,7 @@ def home(request):
 
 > In this file, we will define our all function and backend logic to render it to the output screen
 
-# <p align="center">Project Demonstration</p>
+# <p align="center">`Project Demonstration`</p>
 
 
 

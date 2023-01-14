@@ -53,10 +53,9 @@ def submitted(request):
                 De=value
             if key=="Issued":
                 Is=value
-            
+            if key=="Delivery":
+                Del=value
             print('outfor-6')
-  
-            Del = Is + 5
         c="insert into Details(FullName,Mobile,State,City,PinCode,Address,Laundry,Cloths,Weight,Descriptions,Issued,Delivery) Values('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}')".format(Fu,Mo,St,Ci,Pi,Ad,La,Cl,We,De,Is,Del)
         print('c-7')
         cursor.execute(c)
