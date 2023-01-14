@@ -59,9 +59,6 @@ def submitted(request):
         c="insert into Details(FullName,Mobile,State,City,PinCode,Address,Laundry,Cloths,Weight,Descriptions,Issued,Delivery) Values('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}')".format(Fu,Mo,St,Ci,Pi,Ad,La,Cl,We,De,Is,Del)
         print('c-7')
         cursor.execute(c)
-        # d="SELECT LAST_INSERT_ID();"
-        # cursor.execute(d)
-        # print("hhh")
         
         print('execut-8')
         m.commit()
