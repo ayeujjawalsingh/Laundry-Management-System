@@ -1,5 +1,7 @@
 from django.shortcuts import render
 import mysql.connector as sql
+import json
+import os
 
 
 
@@ -198,6 +200,9 @@ pwd=''
 # Create your views here.
 def Login(request):
     global eem,pwd
+    json_path = os.path.join(os.path.dirname(__file__),'static/Json/Track.json')
+    with open(json_path) as json_file:
+        data = json.load(json_file)
     if request.method=="POST":
         m=sql.connect(host="localhost",user="root",passwd="Ujjawal@21",database='website')
         cursor=m.cursor()
@@ -214,9 +219,9 @@ def Login(request):
         if t==():
             return render(request,'error.html')
         else:
-            return render(request,'welcomeAdmin.html')
+            return render(request,'welcomeAdmin.html',{'data':data})
 
-    return render(request,'WelcomeAdmin.html')
+    return render(request,'WelcomeAdmin.html',{'data':data})
 
 
 def AdminSignin(request):

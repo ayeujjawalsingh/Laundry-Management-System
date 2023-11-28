@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 
 <head>
@@ -66,6 +66,56 @@
                     api.sizeColumnsToFit();
                 })
         }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table Example</title>
+</head>
+<body>
+    <h1>Details of All the Washing Orders</h1>
+    <table id="data-table">
+        <!-- Table headers will be added dynamically using JavaScript -->
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Dummy data for testing
+            const data = [
+                { "Trackingid": 1, "FullName": "John Doe", "Mobile": "123-456-7890" },
+                // Add more data entries as needed
+            ];
+
+            renderTable(data);
+
+            function renderTable(data) {
+                // Get the table element
+                const table = document.getElementById('data-table');
+
+                // Create table headers based on the first data entry
+                const headers = Object.keys(data[0]);
+                const headerRow = table.createTHead().insertRow();
+                headers.forEach(headerText => {
+                    const th = document.createElement('th');
+                    th.innerText = headerText;
+                    headerRow.appendChild(th);
+                });
+
+                // Add data rows
+                data.forEach(entry => {
+                    const row = table.insertRow();
+                    headers.forEach(header => {
+                        const cell = row.insertCell();
+                        cell.innerText = entry[header];
+                    });
+                });
+            }
+        });
     </script>
 </body>
 </html>
